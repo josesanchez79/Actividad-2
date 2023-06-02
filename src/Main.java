@@ -5,7 +5,7 @@ public class Main {
 
         //inicializando scanner y arreglo de calificaciones
         Scanner lector = new Scanner(System.in);
-        int [] califS = new int[5];
+        double [] califS = new double[5];
         System.out.println("Por favor introduce tu nombre");
         String nombreS = lector.nextLine();
 
@@ -21,8 +21,9 @@ public class Main {
         caliRes.nombre = nombreS;
         caliRes.calif = califS;
 
+
         //llamando métodos de la clase para hacer operaciones
-        int prom = caliRes.calcProm(califS);
+        double prom = caliRes.calcProm(califS);
         char caFinal  = caliRes.cFinal(prom);
         caliRes.resultados(nombreS, prom, caFinal);
     }

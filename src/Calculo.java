@@ -2,19 +2,19 @@ public class Calculo {
 
     //atributos
     public String nombre;
-    public int [] calif;
+    public double [] calif;
     public Calculo (){
 
     }
-    public Calculo (String nombre, int [] calif){
+    public Calculo (String nombre, double [] calif){
         this.nombre = nombre;
         this.calif = calif;
     }
 
     //método para cálculo del promedio
-    public int calcProm (int [] calif){
-        int prom = 0;
-        for (int cali: calif){
+    public double calcProm (double [] calif){
+        double prom = 0;
+        for (double cali: calif){
             prom = prom + cali;
         }
         prom = prom / 5;
@@ -22,7 +22,7 @@ public class Calculo {
     }
 
     //método para determinar la calificación con el promedio
-    public char cFinal (int prom){
+    public char cFinal (double prom){
         char caFinal = 'N';
         if (prom <= 50){
             caFinal = 'F';
@@ -46,15 +46,15 @@ public class Calculo {
     }
 
     //método para imprimir resultados
-    public void resultados(String nombre, int prom, char caFinal){
-        System.out.println("\n Nombre del estudiante: " + nombre
-                + "\n Calificación 1: " + calif[0]
-                + "\n Calificación 2: " + calif[1]
-                + "\n Calificación 3: " + calif[2]
-                + "\n Calificación 4: " + calif[3]
-                + "\n Calificación 5: " + calif[4]
-                + "\n Promedio: " + prom
-                + "\n Calificación: " +caFinal);
+    public void resultados(String nombre, double prom, char caFinal){
+        System.out.println("Nombre del estudiante: " + nombre
+                + "\nCalificación 1: " + calif[0]
+                + "\nCalificación 2: " + calif[1]
+                + "\nCalificación 3: " + calif[2]
+                + "\nCalificación 4: " + calif[3]
+                + "\nCalificación 5: " + calif[4]
+                + "\nPromedio: " + prom
+                + "\nCalificación: " +caFinal);
     }
 
 }
